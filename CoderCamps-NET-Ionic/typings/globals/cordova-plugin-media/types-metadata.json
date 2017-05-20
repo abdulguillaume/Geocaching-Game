@@ -1,0 +1,23 @@
+{
+    "authors": "Microsoft Open Technologies Inc <http://msopentech.com>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "0",
+    "libraryMinorVersion": "0",
+    "libraryName": "Apache Cordova Media plugin",
+    "typingsPackageName": "cordova-plugin-media",
+    "projectName": "https://github.com/apache/cordova-plugin-media",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "Global",
+    "globals": [
+        "Media"
+    ],
+    "declaredModules": [],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "6ba3838527e12bd0b906b133b4f788f32ad923a95df7091a85cc567cb37f4a30"
+}

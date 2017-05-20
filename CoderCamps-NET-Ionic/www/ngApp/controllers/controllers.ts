@@ -88,16 +88,28 @@
         }
     }
 
-    enum State { INIT, GOOD, BAD, OK };
+    function statusCallback(status) {
+
+        switch (status) {
+            case Media.MEDIA_STARTING: console.log('Audio file is starting');
+                break;
+            case Media.MEDIA_RUNNING: console.log('Audio file is running');
+                break;
+            case Media.MEDIA_PAUSED: console.log('Audio file is paused');
+                break;
+            case Media.MEDIA_STOPPED: console.log('Audio file is stopped');
+                break;
+            default: console.log('Audio file status unknown');
+                break;
+        }
+    }
 
     export class GeolocationController {
 
         private options = {
-            timeout: 10000,
+            timeout: 5000,
             enableHighAccuracy: false
         }
-
-        public state: State;
 
         private msg: string;
 
@@ -110,7 +122,11 @@
         public watchLat;
         public watchLong;
 
-        constructor(private $cordovaGeolocation: any, private $cordovaVibration:any, private $cordovaMedia:any) {//ngCordova.IGeolocationService) {
+        private myPlayer = null;
+
+        private audioIsPlaying = false;
+
+        constructor(private $cordovaGeolocation: any){//ngCordova.IGeolocationService) {
             this.watchLocation();
         }
 
@@ -125,29 +141,57 @@
             return false;
         }
 
+        //Api found at: https://github.com/apache/cordova-plugin-media
+        public loadMedia(url) {
+
+            let that = this;
+
+            let media = new Media(url, null, null);
+
+            //media.
+            media.play();
+
+            return media;
+
+        }
+
         public doAlert(lat, long) {
 
             let lat_diff = Math.abs(lat - this.lat_ref);
             let long_diff = Math.abs(long - this.long_ref); 
 
+
             if (lat_diff == 0 && long_diff == 0)
             {
                 //special sound
+                this.myPlayer = this.loadMedia('sound/usa-anthem.mp3')
                 this.msg = "Welcome to the land of the free!";
+                //this.myPlayer.play();
+
                 return;
             }
 
-            //this.msg = long_diff + " ? " + (this.long_0 - this.long_ref);
+
+            if (this.myPlayer!=null)
+            {
+                this.myPlayer.stop();
+            }
 
             if (lat_diff <= Math.abs(this.lat_0 - this.lat_ref) && long_diff <= Math.abs(this.long_0 - this.long_ref)) {
+
                 //make sound
-                this.msg = "\nYou're in the right direction!";
+                this.myPlayer = this.loadMedia('sound/clock-ticking.mp3');
+                this.msg = "You're in the right path!";
+                //this.myPlayer.play();
+
                 return;
             }
 
-            if (lat_diff > Math.abs(this.lat_0 - this.lat_ref) || long_diff > Math.abs(this.long_0 - this.long_ref)) {         
+            if (lat_diff > Math.abs(this.lat_0 - this.lat_ref) || long_diff > Math.abs(this.long_0 - this.long_ref)) {   
+                
                 //vibrate
-                this.msg = "\nYou're in the wrong direction!";
+                this.msg = "You're in the wrong path!";
+                navigator.vibrate(1000);
                 return;
             }
 
@@ -167,12 +211,11 @@
 
                 if (this.lat_0 == null && this.long_0 == null) {
                     this.msg = 'init...';
-                    this.state = State.INIT;
                 } else if (!this.ifStationary(this.watchLat, this.watchLong)) {
                     this.msg = 'moving..';
                     this.doAlert(this.watchLat, this.watchLong);
                 } else {
-                    this.msg = 'stationary...';
+                   // this.msg = 'stationary...';
                 }
 
                 this.lat_0 = this.watchLat;

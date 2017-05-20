@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/cordova-plugin-media",
+        "scope": "@types",
+        "escapedName": "@types%2fcordova-plugin-media",
+        "name": "@types/cordova-plugin-media",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\GAJJ\\Documents\\Visual Studio 2015\\Projects\\some_modules"
+    ]
+  ],
+  "_from": "@types/cordova-plugin-media@latest",
+  "_id": "@types/cordova-plugin-media@0.0.3",
+  "_inCache": true,
+  "_location": "/@types/cordova-plugin-media",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-media-0.0.3.tgz_1474302710368_0.23701082402840257"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/cordova-plugin-media",
+    "scope": "@types",
+    "escapedName": "@types%2fcordova-plugin-media",
+    "name": "@types/cordova-plugin-media",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/cordova-plugin-media/-/cordova-plugin-media-0.0.3.tgz",
+  "_shasum": "6dc8dff444482964e834cf2bc75eac1c349a8c4f",
+  "_shrinkwrap": null,
+  "_spec": "@types/cordova-plugin-media",
+  "_where": "C:\\Users\\GAJJ\\Documents\\Visual Studio 2015\\Projects\\some_modules",
+  "author": {
+    "name": "Microsoft Open Technologies Inc",
+    "email": "http://msopentech.com"
+  },
+  "dependencies": {},
+  "description": "TypeScript definitions for Apache Cordova Media plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6dc8dff444482964e834cf2bc75eac1c349a8c4f",
+    "tarball": "https://registry.npmjs.org/@types/cordova-plugin-media/-/cordova-plugin-media-0.0.3.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/cordova-plugin-media",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "6ba3838527e12bd0b906b133b4f788f32ad923a95df7091a85cc567cb37f4a30",
+  "typings": "index.d.ts",
+  "version": "0.0.3"
+}
