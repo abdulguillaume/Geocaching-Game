@@ -29,4 +29,6 @@
   <plugin name="ionic-plugin-keyboard" spec="~1.0.8" />
   <plugin name="cordova-plugin-camera" version="2.1.1" />
   <plugin name="cordova-plugin-geolocation" version="2.1.0" />
+  <plugin name="cordova-plugin-vibration" version="2.1.5" />
+  <plugin name="cordova-plugin-media" version="2.1.0" />
 </widget>

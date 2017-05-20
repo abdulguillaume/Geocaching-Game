@@ -110,19 +110,10 @@
         public watchLat;
         public watchLong;
 
-        constructor(private $cordovaGeolocation: any) {//ngCordova.IGeolocationService) {
+        constructor(private $cordovaGeolocation: any, private $cordovaVibration:any, private $cordovaMedia:any) {//ngCordova.IGeolocationService) {
             this.watchLocation();
         }
 
-        //public getCurrentLocation() {
-        //    this.$cordovaGeolocation.getCurrentPosition(this.options)
-        //        .then((location) => {
-        //            this.lat = location.coords.latitude;
-        //            this.long = location.coords.longitude;
-        //        }, (error) => {
-        //            console.log(error);
-        //        });
-        //}
 
         public ifStationary(lat, long)
         {
@@ -165,7 +156,9 @@
         }
 
         public watchLocation() {
+
             let watch = this.$cordovaGeolocation.watchPosition(this.options);
+
             watch.then(null, (error) => {
                 console.log(error);
             }, (location) => {

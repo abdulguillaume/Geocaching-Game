@@ -97,8 +97,10 @@ var MyApp;
         })(State || (State = {}));
         ;
         var GeolocationController = (function () {
-            function GeolocationController($cordovaGeolocation) {
+            function GeolocationController($cordovaGeolocation, $cordovaVibration, $cordovaMedia) {
                 this.$cordovaGeolocation = $cordovaGeolocation;
+                this.$cordovaVibration = $cordovaVibration;
+                this.$cordovaMedia = $cordovaMedia;
                 this.options = {
                     timeout: 10000,
                     enableHighAccuracy: false
@@ -107,15 +109,6 @@ var MyApp;
                 this.long_ref = -74.044500;
                 this.watchLocation();
             }
-            //public getCurrentLocation() {
-            //    this.$cordovaGeolocation.getCurrentPosition(this.options)
-            //        .then((location) => {
-            //            this.lat = location.coords.latitude;
-            //            this.long = location.coords.longitude;
-            //        }, (error) => {
-            //            console.log(error);
-            //        });
-            //}
             GeolocationController.prototype.ifStationary = function (lat, long) {
                 if (this.lat_0 == lat && this.long_0 == long) {
                     return true;
