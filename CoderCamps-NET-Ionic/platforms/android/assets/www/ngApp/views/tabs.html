@@ -5,6 +5,11 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
+    <!-- My Tab -->
+    <ion-tab title="Quotes" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/quote">
+        <ion-nav-view name="tab-quotes"></ion-nav-view>
+    </ion-tab>
+
   <!-- Dashboard Tab -->
   <ion-tab title="Status" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
     <ion-nav-view name="tab-dash"></ion-nav-view>
@@ -20,5 +25,14 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
 
+    <!-- Camera Tab -->
+    <ion-tab title="Camera" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/camera">
+        <ion-nav-view name="tab-camera"></ion-nav-view>
+    </ion-tab>
+    
+    <!-- Geolocation Tab -->
+    <ion-tab title="Geolocation" icon-off="ion-ios-world-outline" icon-on="ion-ios-world" href="#/tab/geolocation">
+        <ion-nav-view name="tab-geolocation"></ion-nav-view>
+    </ion-tab>
 
 </ion-tabs>

@@ -1,6 +1,32 @@
 ﻿namespace MyApp.Services {
 
 
+    export class QuoteService {
+
+        private quotes = [
+            { owner: 0, msg: "lew ap manje nan men moun chich ou kenbe kiyew kout." },
+            { owner: 0, msg: "pye kout pran devan." },
+            { owner: 1, msg: "whatever you want!!" },
+            { owner: 1, msg: "nothing to say!!" },
+            { owner: 2, msg: "it is not worth my money." },
+            { owner: 2, msg: "let see if i will have a job after this" },
+            { owner: 2, msg: "listening to reggaeton!" }
+
+        ]
+
+
+        public get(ownerId) {
+
+            let _quotes = this.quotes.filter(c => c.owner == ownerId);
+
+            let index = Math.floor((Math.random() * (_quotes.length)));
+
+            return _quotes[index];
+        }
+
+
+    }
+
     export class ChatService {
         // Some fake testing data
         private chats = [{
@@ -45,5 +71,7 @@
     }
 
     angular.module('MyApp').service('chatService', ChatService);
+
+    angular.module('MyApp').service('quoteService', QuoteService);
 
 }

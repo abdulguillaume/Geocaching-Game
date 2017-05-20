@@ -1,6 +1,6 @@
 var MyApp;
 (function (MyApp) {
-    angular.module('MyApp', ['ionic', 'ui.router'])
+    angular.module('MyApp', ['ionic', 'ui.router', 'ngCordova'])
         .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -18,6 +18,51 @@ var MyApp;
         .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         // Define routes
         $stateProvider
+            .state('geolocation', {
+            url: '/geolocation',
+            templateUrl: '/ngApp/views/tab-geolocation.html',
+            controller: MyApp.Controllers.GeolocationController,
+            controllerAs: 'controller'
+            //views: {
+            //    'tab-geolocation': {
+            //        templateUrl: '/ngApp/views/tab-geolocation.html',
+            //        controller: MyApp.Controllers.GeolocationController,
+            //        controllerAs: 'controller'
+            //    }
+            //}
+        })
+            .state('tab.camera', {
+            url: '/camera',
+            views: {
+                'tab-camera': {
+                    templateUrl: '/ngApp/views/tab-camera.html',
+                    controller: MyApp.Controllers.CameraController,
+                    controllerAs: 'controller'
+                }
+            }
+            //templateUrl: '/ngApp/views/some-quotes.html',
+            //controller: MyApp.Controllers.QuoteController,
+            //controllerAs: 'controller'
+        })
+            .state('tab.quotes', {
+            url: '/quotes',
+            views: {
+                'tab-quotes': {
+                    templateUrl: '/ngApp/views/some-quotes.html',
+                    controller: MyApp.Controllers.QuoteController,
+                    controllerAs: 'controller'
+                }
+            }
+            //templateUrl: '/ngApp/views/some-quotes.html',
+            //controller: MyApp.Controllers.QuoteController,
+            //controllerAs: 'controller'
+        })
+            .state('home', {
+            url: '/',
+            templateUrl: '/ngApp/views/tab-home.html',
+            controller: MyApp.Controllers.HomeController,
+            controllerAs: 'controller'
+        })
             .state('tab', {
             url: '/tab',
             abstract: true,
@@ -64,7 +109,9 @@ var MyApp;
             }
         });
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/tab/dash');
+        //$urlRouterProvider.otherwise('/tab/quotes');
+        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/geolocation');
     });
 })(MyApp || (MyApp = {}));
 //# sourceMappingURL=app.js.map

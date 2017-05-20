@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/cordova-plugin-camera",
+        "scope": "@types",
+        "escapedName": "@types%2fcordova-plugin-camera",
+        "name": "@types/cordova-plugin-camera",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\GAJJ\\Documents\\Visual Studio 2015\\Projects\\CoderCamps-NET-Ionic\\CoderCamps-NET-Ionic"
+    ]
+  ],
+  "_from": "@types/cordova-plugin-camera@latest",
+  "_id": "@types/cordova-plugin-camera@0.0.3",
+  "_inCache": true,
+  "_location": "/@types/cordova-plugin-camera",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-camera-0.0.3.tgz_1474302727699_0.09308229153975844"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/cordova-plugin-camera",
+    "scope": "@types",
+    "escapedName": "@types%2fcordova-plugin-camera",
+    "name": "@types/cordova-plugin-camera",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@types/cordova-plugin-camera/-/cordova-plugin-camera-0.0.3.tgz",
+  "_shasum": "8f84af756fa453dbc34e367860ac410073138e60",
+  "_shrinkwrap": null,
+  "_spec": "@types/cordova-plugin-camera",
+  "_where": "C:\\Users\\GAJJ\\Documents\\Visual Studio 2015\\Projects\\CoderCamps-NET-Ionic\\CoderCamps-NET-Ionic",
+  "author": {
+    "name": "Microsoft Open Technologies Inc",
+    "email": "http://msopentech.com"
+  },
+  "dependencies": {},
+  "description": "TypeScript definitions for Apache Cordova Camera plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8f84af756fa453dbc34e367860ac410073138e60",
+    "tarball": "https://registry.npmjs.org/@types/cordova-plugin-camera/-/cordova-plugin-camera-0.0.3.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/cordova-plugin-camera",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typesPublisherContentHash": "a8f021bdf45f85bf3b858b59c0ddd7a62b0976e80f45b6ce33abe99a6f03086b",
+  "typings": "index.d.ts",
+  "version": "0.0.3"
+}
